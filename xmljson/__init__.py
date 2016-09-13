@@ -9,7 +9,7 @@ except ImportError:
 
 __author__ = 'S Anand'
 __email__ = 'root.node@gmail.com'
-__version__ = '0.1.6'
+__version__ = '0.1.7'
 
 # Python 3: define unicode() as str()
 if sys.version_info[0] == 3:
@@ -51,7 +51,7 @@ class XMLData(object):
             value = 'true'
         elif value is False:
             value = 'false'
-        return unicode(value)
+        return unicode(value)       # noqa: convert to whatever native unicode repr
 
     @staticmethod
     def _fromstring(value):
